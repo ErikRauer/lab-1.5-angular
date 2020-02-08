@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class CartService {
 
   items=[];
@@ -15,8 +17,8 @@ export class CartService {
     return this.items;
   }
 
-    clearCart(){
-      this.items=[];
-      return this.items;
-    }
+  clearCart(){
+    this.items=[];
+    return this.items;
+  }
 }
